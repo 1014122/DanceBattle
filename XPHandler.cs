@@ -27,11 +27,7 @@ public class XPHandler : MonoBehaviour
 
     public void GainXP(BattleResultEventData data)
     {
-        // code here only
-       
-       
-        //here add points to the variables
-
+       //if statement that decides when the player levels up based on xp amount
         data.player.xp += 3;
         if (data.player.xp == 10)
         {
@@ -40,12 +36,6 @@ public class XPHandler : MonoBehaviour
             StatsGenerator.AssignUnusedPoints(data.player, 10);
             Debug.Log(data.player.level);
         }
-        //  check if player has leveled up 
-        //  if they have leveled up run this code
-        //  GameEvents.playerLevelUp(data.player.level);
-
-        //  when player levels up call these lines to add points to stats
-        //  int numPoints = 10;
-        //StatsGenerator.AssignUnusedPoints(data.player, put points here)
+        
     }
 }
